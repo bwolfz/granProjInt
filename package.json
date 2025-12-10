@@ -1,0 +1,20 @@
+{
+  "name": "app.js",
+  "version": "1.0.0",
+  "description": "Projeto Integrador",
+  "homepage": "https://github.com/bwolfz/granProjInt#readme",
+  "bugs": {
+    "url": "https://github.com/bwolfz/granProjInt/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bwolfz/granProjInt.git"
+  },
+  "license": "ISC",
+  "author": "Kilder Tavora",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
