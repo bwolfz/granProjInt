@@ -4,16 +4,13 @@ const path = require("path");
 const app = express();
 app.use(express.json());
 
-// 🔹 Rotas do backend
-const produtoRoutes = require("./routes/produtoRoutes");
-const fornecedorRoutes = require("./routes/fornecedorRoutes");
-const associacaoRoutes = require("./routes/associacaoRoutes");
+// Rotas do backend
+const routes = require('./src/routes');
 
-app.use("/api/produtos", produtoRoutes);
-app.use("/api/fornecedores", fornecedorRoutes);
-app.use("/api/associacoes", associacaoRoutes);
+app.use(express.json());
+app.use('/api', routes);
 
-// 🔹 Servir o frontend (React buildado)
+// Servir o frontend (React buildado)
 app.use(express.static(path.join(__dirname, "frontend", "build")));
 
 app.get("*", (req, res) => {
@@ -22,8 +19,8 @@ app.get("*", (req, res) => {
   );
 });
 
-// 🔹 Porta dinâmica (Replit exige isso)
+//  Porta dinâmica 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log("Servidor fullstack rodando");
-});
+}); 
