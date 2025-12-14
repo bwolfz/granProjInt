@@ -1,5 +1,5 @@
 {
-  "name": "app.js",
+  "name": "projeto-integrador-fullstack",
   "version": "1.0.0",
   "description": "Projeto Integrador",
   "homepage": "https://github.com/bwolfz/granProjInt#readme",
@@ -13,8 +13,9 @@
   "license": "ISC",
   "author": "Kilder Tavora",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
