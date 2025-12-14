@@ -2,6 +2,15 @@ const Fornecedor = require("../models/Fornecedor");
 
 module.exports = {
     async criar(req, res) {
+         try {
+    console.log(req.body);
+    const fornecedor = await Fornecedor.create(req.body);
+    res.status(201).json(fornecedor);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ erro: err.message });
+  }
+
         const { nome, cnpj, endereco, contato } = req.body;
         const fornecedor = await Fornecedor.create({ nome, cnpj, endereco, contato });
         return res.json(fornecedor);
