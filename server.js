@@ -9,9 +9,9 @@ const sequelize = require("./src/database");
 app.use(express.json());
 app.use('/api', routes);
 
-sequelize.sync({ alter: true })
+sequelize.sync({ force: true })
   .then(() => {
-    console.log("Banco sincronizado");
+    console.log("Banco recriado com sucesso");
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
