@@ -2,8 +2,18 @@ const Produto = require("../models/Produto");
 
 module.exports = {
     async criar(req, res) {
+        try {
+    console.log(req.body);
+
+    const produto = await Produto.create(req.body);
+    res.status(201).json(produto);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ erro: err.message });
+  }
         const { nome, descricao, preco, codigo_barra } = req.body;
         const produto = await Produto.create({ nome, descricao, preco, codigo_barra });
+        
         return res.json(produto);
     },
 
