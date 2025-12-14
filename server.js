@@ -1,12 +1,12 @@
 
-/* const express = require("express");
+const express = require("express");
 const sequelize = require("./src/database");
 const routes = require("./src/routes");
 
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('API ONLINE');
+  res.status(200).send("API ONLINE");
 });
 
 
@@ -17,17 +17,17 @@ sequelize.sync({ force: true })
   .then(() => {
     console.log("Banco recriado com sucesso");
 
-    const PORT = process.env.PORT || 10000;
-    app.listen(PORT, () => {
+    const PORT = process.env.PORT;
+    app.listen(PORT, "0.0.0.0", () => {
       console.log("Servidor rodando na porta", PORT);
     });
   })
   .catch(err => {
     console.error("Erro ao sincronizar banco:", err);
   });
- */
+ 
 
-const express = require("express");
+/* const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
@@ -37,4 +37,4 @@ app.get("/", (req, res) => {
 const PORT = process.env.PORT;
 app.listen(PORT, "0.0.0.0", () => {
   console.log("Servidor rodando na porta", PORT);
-});
+}); */
