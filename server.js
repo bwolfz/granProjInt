@@ -25,5 +25,5 @@ app.get("*", (req, res) => {
 // 🔹 Porta dinâmica (Replit exige isso)
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log("Servidor fullstack rodando 🚀");
+  console.log("Servidor fullstack rodando");
 });
