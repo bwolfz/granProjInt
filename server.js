@@ -27,14 +27,14 @@ sequelize.sync({ force: true })
   });
  */
 
-  const express = require('express');
+const express = require("express");
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('API ONLINE');
+app.get("/", (req, res) => {
+  res.status(200).send("API ONLINE");
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log('Servidor rodando na porta', PORT);
+const PORT = process.env.PORT;
+app.listen(PORT, "0.0.0.0", () => {
+  console.log("Servidor rodando na porta", PORT);
 });
