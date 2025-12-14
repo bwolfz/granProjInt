@@ -5,9 +5,9 @@ const app = express();
 app.use(express.json());
 
 // 🔹 Rotas do backend
-const produtoRoutes = require("./src/routes/produtoRoutes");
-const fornecedorRoutes = require("./src/routes/fornecedorRoutes");
-const associacaoRoutes = require("./src/routes/associacaoRoutes");
+const produtoRoutes = require("./routes/produtoRoutes");
+const fornecedorRoutes = require("./routes/fornecedorRoutes");
+const associacaoRoutes = require("./routes/associacaoRoutes");
 
 app.use("/api/produtos", produtoRoutes);
 app.use("/api/fornecedores", fornecedorRoutes);
