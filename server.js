@@ -1,4 +1,4 @@
-const express = require("express");
+/* const express = require("express");
 const sequelize = require("./src/database");
 const routes = require("./src/routes");
 
@@ -24,3 +24,16 @@ sequelize.sync({ force: true })
   .catch(err => {
     console.error("Erro ao sincronizar banco:", err);
   });
+ */
+
+  const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('API ONLINE');
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log('Servidor rodando na porta', PORT);
+});
